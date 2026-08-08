@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
-group = "fr.xyness"
+group = "de.sabbelsocke"
 version = "1.13.1"
 
 java {
@@ -63,7 +63,7 @@ tasks.withType<JavaCompile> {
 
 tasks.shadowJar {
     archiveFileName.set("SimpleClaimSystem-${project.version}.jar")
-    relocate("com.zaxxer.hikari", "fr.xyness.libs.hikari")
+    relocate("com.zaxxer.hikari", "de.sabbelsocke.libs.hikari")
 
     minimize()
 }
@@ -71,21 +71,21 @@ tasks.shadowJar {
 tasks.build {
     dependsOn(tasks.shadowJar)
 }
-
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
-    }
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Xyness/SimpleClaimSystem")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
+//
+//publishing {
+//    publications {
+//        create<MavenPublication>("mavenJava") {
+//            from(components["java"])
+//        }
+//    }
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/Xyness/SimpleClaimSystem")
+//            credentials {
+//                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+//                password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_TOKEN")
+//            }
+//        }
+//    }
+//}

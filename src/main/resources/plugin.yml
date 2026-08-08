@@ -1,7 +1,7 @@
 name: SimpleClaimSystem
 version: 1.13.1
-main: fr.xyness.SCS.SimpleClaimSystem
-authors: [Xyness]
+main: de.sabbelsocke.SCS.SimpleClaimSystem
+authors: [Sabbelsocke]
 softdepend: [PlaceholderAPI, WorldGuard, Vault, dynmap, BlueMap, pl3xmap, GriefPrevention, floodgate, ItemsAdder]
 api-version: 1.18
 folia-supported: true
