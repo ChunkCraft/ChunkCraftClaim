@@ -144,9 +144,7 @@ public class SimpleClaimSystem extends JavaPlugin {
 
         if (loadConfig(false, Bukkit.getConsoleSender())) {
             info(" ");
-            info(ChatColor.GREEN + "Successfully enabled!" + ChatColor.GRAY + " | By Xyness");
-            info(ChatColor.GRAY + "Wiki: " + ChatColor.WHITE + "https://xyness.gitbook.io/simpleclaimsystem");
-            info(ChatColor.GRAY + "Discord: " + ChatColor.WHITE + "https://discord.gg/6sRTGprM95");
+            info(ChatColor.GREEN + "Successfully enabled!" + ChatColor.GRAY + " | By Sabbelsocke");
             info(" ");
         } else {
             Bukkit.getServer().getPluginManager().disablePlugin(this);
@@ -164,11 +162,6 @@ public class SimpleClaimSystem extends JavaPlugin {
 
 
         Bukkit.getOnlinePlayers().forEach(p -> claimBossBarInstance.disableBossBar(p));
-        info(" ");
-        info(ChatColor.GOLD + "  " + ChatColor.BOLD + "SimpleClaimSystem V2" + ChatColor.RESET + ChatColor.YELLOW + " - Premium Edition");
-        info(ChatColor.GRAY + "  Unlock advanced features, priority support & more.");
-        info(ChatColor.GRAY + "  " + ChatColor.UNDERLINE + "https://builtbybit.com/resources/simpleclaimsystem-v2.92437/");
-        info(" ");
         getLogger().info("SimpleClaimSystem disabled.");
     }
 
@@ -177,11 +170,7 @@ public class SimpleClaimSystem extends JavaPlugin {
      */
     @Override
     public void onLoad() {
-        info(" ");
-        info(ChatColor.GOLD + "  " + ChatColor.BOLD + "SimpleClaimSystem V2" + ChatColor.RESET + ChatColor.YELLOW + " - Premium Edition");
-        info(ChatColor.GRAY + "  Unlock advanced features, priority support & more.");
-        info(ChatColor.GRAY + "  " + ChatColor.UNDERLINE + "https://builtbybit.com/resources/simpleclaimsystem-v2.92437/");
-        info(" ");
+
         if (Bukkit.getPluginManager().getPlugin("WorldGuard") != null) {
         	claimWorldguardInstance = new ClaimWorldGuard();
             claimWorldguardInstance.registerCustomFlag();

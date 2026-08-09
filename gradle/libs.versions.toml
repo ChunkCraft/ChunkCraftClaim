@@ -19,7 +19,7 @@ adventure-api = "4.17.0"
 adventure-minimessage = "4.17.0"
 adventure-platform = "4.3.4"
 junit = "5.10.5"
-shadow = "8.3.5"
+shadow = "8.3.10"
 
 [libraries]
 authlib = { module = "com.mojang:authlib", version.ref = "authlib" }
